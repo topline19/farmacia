@@ -6,10 +6,10 @@ import 'package:flutter/material.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
 //função principal que inicia o aplicativo.
 
-Void main(){
+void main(){
  //executando o app e anexa à tela.
 
-  runApp(const Myapp());
+  runApp(const Myapp()); //fazer rodar o aplicativo
 
 }
 
@@ -17,9 +17,15 @@ Void main(){
 class MyApp extends StatelessWidget{
   const MyApp ({super.key});
   @override //substituir
-  Widget build (BuildContext context){
+  Widget build (BuildContext context){ //está construindo o contexto de construção
     return MaterialApp( //retornar para o que é necessário
-
+title: 'Rede Droganitos ',
+theme: ThemeData(
+  colorScheme: ColorScheme.fromSeed.(seedColor:Colors.deepPurple),
+  useMaterial3: true,
+),
+home: const MyHomePage(title:'Rede Droganitos'),
+    );
   }
 }
 
